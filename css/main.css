@@ -1,0 +1,763 @@
+/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   STYLE GUIDE
+   ========================================================================== */
+
+/*
+ *      -  PRIMARY COLORS   -    *//*
+ * 
+ *  Woodland Green: rgb(72, 92, 42);
+ *  Sage Green (original) rgb(121, 148, 115);
+ *
+ *
+ *      -  SECONDARY COLORS   -   *//*
+ *
+ *  Arctic Blue: rgb(166, 193, 188);
+ *  Carl Blue: rgb(127 153 179);
+ *
+ *
+ *    -  WEB SET/POP-OUT TEXT -   *//*
+ *
+ *  Primary Grey: rgb(203, 204, 206);
+ *  Secondary Grey: rgb(197, 198, 200);
+ *  Pop-out Teal: rbg(146, 146, 147);
+ *
+ *
+ *       -   FONT FAMILY     -    *//*
+ *
+ *  font-family: 'Lora', serif;
+
+/* ==========================================================================
+   Fonts @import: place all fonts here
+   ========================================================================== */
+
+@import url(https://fonts.googleapis.com/css?family=Lora); /* font-family: 'Lora', serif; */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+body {
+    font-family: 'Lora', serif;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, li{
+    font-family: 'Lora', serif; 
+}
+
+.wdlnd-green {
+    color: rgb(72, 92, 42);
+}
+.prmry-grey{
+    color: rgb(203, 204, 206);
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* 
+ *      - -     Body      - -  //
+ */
+
+body {
+    position: relative;
+}
+.container {
+    width: 100%;
+    max-width: none;
+}
+.row {
+    position: relative;
+    margin: 0 auto;
+}
+
+.max-width{
+    max-width: 1082px;
+    width: 85%;
+}
+
+/* 
+ *      - -     Nav Bar    - -  //
+ */
+
+
+.nav-row {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+
+#logo {
+    max-width: 150px;
+}
+
+.headline {
+    font-size: 52px;
+    margin: 0;
+    margin-top: 10px;
+}
+
+.sub-header-1 {
+    font-size: 32px;
+    margin: 10px;
+}
+
+.sub-header-2 {
+    margin: 0;
+    font-size: 24px;
+}
+div.social {
+    position: absolute;
+    right: 40px;
+    width: 100px;
+    top: 25px;
+    text-align: right;
+}
+i.fa {
+    margin: 1px 5%;
+}
+.social a {
+    color: #485c2a;
+}
+.social a:hover {
+    color: #485c2a;
+}
+
+i.fa.fa-bars {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+    color: rgb(72, 92, 42);
+    font-size: 1.5em;
+}
+i.fa.fa-bars:hover{
+    cursor: pointer;
+}
+nav ul {
+    display: block;
+    margin-bottom: 10px;
+    background-color: rgb(72, 92, 42);
+    padding-bottom: 3px;
+    text-align: center;
+}
+
+
+nav li {
+    display: inline-block;
+    list-style: none;
+    text-transform: uppercase;
+    margin-left: 9%;
+    height: 0;
+    line-height: 0;
+}
+nav li:first-child{
+    margin-left: 0;
+}
+
+nav a{
+    text-decoration: none;
+    color: #fffeff;
+    font-size: 18px;
+}
+nav a:hover{
+    color: #fffeff;
+}
+
+/* 
+ *      - -     Jumbo    - -  //
+ */
+
+.jumbo .slider {
+    background: url('../img/jumbo.jpg') center center no-repeat;
+    height: 400px;
+    width: 100%;
+    background-size: 100%;
+}
+
+.fa-angle-left, .fa-angle-right{
+    position: absolute;
+}
+.fa-angle-left:hover, .fa-angle-right:hover{
+    cursor: pointer;
+} 
+i.fa-angle-left{
+    top: 100px;
+}
+i.fa-angle-right{
+    right: 0;
+    top: 100px;
+}
+div.jumbo-subheadings{
+    margin: 20px auto;
+}
+
+.jumbo-h3 {
+    font-size: 36px;
+    margin: 0px 15px;
+}
+.jumbo-subheading{
+    margin: 2px 15px 0;
+    font-size: 18px;
+    text-align: right;
+}
+
+/* 
+ *      - -     Footer    - -  //
+ */
+
+.footer-row {
+    margin: 20px auto;
+    font-size: 16px;
+}
+.footer-row p{
+    margin: 0;
+}
+.banner {
+    text-align: center;
+    padding: 5px;
+    background-color: rgb(72, 92, 42);
+    color: #fffeff;
+}
+
+.info {
+    max-width: none;
+    padding: 45px 20px 0;
+    border-top: 1px solid rgb(203, 204, 206);;
+}
+.signup form{
+    text-align: center;
+    margin: 10px;
+}
+.signup input{
+    margin: 0 10px;
+    width: 220px;
+    border: 1px solid #000;
+    border-radius: 0;
+    font-family: 'Lora', serif;
+    font-size: 14px;
+}
+
+.signup input::-webkit-input-placeholder {
+    font-family: 'Lora', serif; 
+    text-transform: uppercase;
+    font-size: 11px;
+}
+
+.signup input:-ms-input-placeholder {
+    font-family: 'Lora', serif;
+    text-transform: uppercase;
+    font-size: 11px;
+}
+
+.signup input:-moz-placeholder {
+    font-family: 'Lora', serif;
+    text-transform: uppercase;
+    font-size: 11px;
+}
+
+.signup input::-moz-placeholder {
+    font-family: 'Lora', serif;
+    text-transform: uppercase;
+    font-size: 11px;
+}
+
+
+.signup input:focus{
+    border: 1px solid black;
+}
+.signup button{
+    border: 1px solid #000;
+    line-height: 38px;
+    padding:  0 20px;
+    border-radius: 0;
+    font-family: 'Lora', serif;
+}
+.contact {
+    text-align: right;
+}
+.contact a{
+    color: black;
+    text-decoration: none;
+}
+.contact a:hover{
+    color: inherit;
+}
+#phone::after{
+    content: '\f095';
+    font-family: FontAwesome;
+    margin-left: 10px;
+}
+#email::after{
+    content: '\f0e0';
+    font-family: FontAwesome;
+    margin-left: 10px;
+}
+
+.banner p{
+    margin: 0;
+    font-size: 16px;
+}
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen 
+and (max-width: 1024px){
+
+    
+    /*      Headline   */
+    
+    .ten.columns.headline-row {
+        width: 70%;
+        margin-left: 13%;
+    }
+
+    #pipe {
+        display: none;
+    }
+
+    .sub-header-2{
+        display: block;
+    }
+
+    
+    /*       Menu       */
+    
+    .nav-row{
+        margin-bottom: 60px;
+    }
+
+    i.fa.fa-bars{
+        margin: 2.75% 8.5%;
+        display: block;
+        z-index: 10000;
+    }
+
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 2.5% 7.5%;
+        max-width: 200px;
+        background-color: rgb(203, 204, 206);
+        z-index: 1;
+    }
+    nav li {
+        display: block;
+        height: 20px;
+        line-height: 30px;
+        margin-left: 50px;
+        text-align: left;
+        width: 130px;
+    }
+    nav li:first-child{
+        margin-left: 50px;
+        margin-top: 5px;
+    }
+    nav a{
+        color: rgb(72, 92, 42);
+    }
+    
+    div.social{
+        font-size: 1.25em;
+        top: 65px;
+        right: .75%;
+    }
+
+    .social i{
+        display: block;
+        margin-top: 10px;
+    }
+    .fa-facebook{
+        margin-right: 11.5px!important;
+    }
+
+    /*        Footer       */
+
+    .signup form{
+        margin: 0;
+    }
+    .signup input {
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    
+    /*      Header      */
+
+    .nav-row {
+        margin-bottom: 0;
+    }
+
+    .two.columns.logo-row{
+        width: 100%;
+    }
+    #logo {
+        display: block;
+        margin: 0 auto;
+        max-width: 35%;
+    }
+    .headline-row{
+        text-align: center;
+    }
+    div.social{
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        text-align: center;
+        top: 0;
+    }
+    .social i{
+        display: inline-block;
+    }
+    i.fa {
+        margin: 1px 1.5%;
+    }
+}
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-width : 320px)
+and (max-width : 480px) {
+/* Styles */
+}
+ 
+/* Smartphones (landscape) ----------- */
+@media only screen
+and (min-width : 321px) {
+/* Styles */
+}
+ 
+/* Smartphones (portrait) ----------- */
+@media only screen
+and (max-width : 546px) {
+
+    .container {
+        padding: 0;
+    }
+    .max-width{
+        width: 90%;
+    }
+
+    /*      Jumbo       */
+    .slider{
+        max-height: 200px;
+    }
+    .jumbo-subheadings{
+        text-align: center;
+    }
+    .jumbo-subheading{
+        text-align: center;
+    }
+
+    .info{
+        text-align: center;
+    }
+    .footer-row p{
+        text-align: center;
+    }
+
+    .signup form{
+        margin-top: 15px;
+    }
+}
+ 
+/* iPads (portrait and landscape) ----------- */
+@media only screen
+and (min-width : 768px)
+and (max-width : 1024px) {
+    
+}
+ 
+/* iPads (landscape) ----------- */
+@media only screen
+and (min-width : 768px)
+and (max-width : 1024px)
+and (orientation : landscape) {
+/* Styles */
+}
+ 
+/* iPads (portrait) ----------- */
+@media only screen
+and (min-width : 768px)
+and (max-width : 1024px)
+and (orientation : portrait) {
+/* Styles */
+}
+ 
+/* Desktops and laptops ----------- */
+@media only screen
+and (min-width : 1224px) {
+
+}
+ 
+/* Large screens ----------- */
+@media only screen
+and (min-width : 1824px) {
+/* Styles */
+}
+ 
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+/* Styles */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after,
+    *:first-letter,
+    *:first-line {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
