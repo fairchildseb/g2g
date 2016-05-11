@@ -20,14 +20,14 @@
  *      -  SECONDARY COLORS   -   *//*
  *
  *  Arctic Blue: rgb(166, 193, 188);
- *  Carl Blue: rgb(127 153 179);
+ *  Carl Blue: rgb(127, 153, 179);
  *
  *
  *    -  WEB SET/POP-OUT TEXT -   *//*
  *
  *  Primary Grey: rgb(203, 204, 206);
  *  Secondary Grey: rgb(197, 198, 200);
- *  Pop-out Teal: rbg(146, 146, 147);
+ *  Pop-out Teal: rgb(64, 193, 172);
  *
  *
  *       -   FONT FAMILY     -    *//*
@@ -56,6 +56,10 @@ body {
 
 h1, h2, h3, h4, h5, h6, p, a, li{
     font-family: 'Lora', serif; 
+}
+
+a {
+    text-decoration: none;
 }
 
 .wdlnd-green {
@@ -177,23 +181,23 @@ body {
 
 
 #logo {
-    max-width: 150px;
+    max-width: 115px;
 }
 
 .headline {
-    font-size: 52px;
+    font-size: 48px;
     margin: 0;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 .sub-header-1 {
-    font-size: 32px;
-    margin: 10px;
+    font-size: 28px;
+    margin: 10px 0;
 }
 
 .sub-header-2 {
     margin: 0;
-    font-size: 24px;
+    font-size: 20px;
 }
 div.social {
     position: absolute;
@@ -202,16 +206,19 @@ div.social {
     top: 25px;
     text-align: right;
 }
+
 i.fa {
     margin: 1px 5%;
 }
-.social a {
+.social .fa {
     color: #485c2a;
 }
 .social a:hover {
     color: #485c2a;
 }
-
+#mobile-menu{
+    display: none;
+}
 i.fa.fa-bars {
     position: absolute;
     top: 0;
@@ -225,20 +232,56 @@ i.fa.fa-bars:hover{
 }
 nav ul {
     display: block;
-    margin-bottom: 10px;
+    margin: 10px 0;
     background-color: rgb(72, 92, 42);
-    padding-bottom: 3px;
     text-align: center;
+    line-height: 10px;
+    padding-top: 15px;
+}
+nav li:hover .sub-menu-1{
+    display: block;
+}
+.sub-menu-1{
+    display: none;
+    position: absolute;
+    margin: 16px -5px;
+    z-index: 1000;
+    text-align: left;
+    padding: 0;
+    background-color: #fffeff;
 }
 
+.sub-menu-1 li {
+    display: block;
+    margin: 0;
+    text-transform: none;
+    line-height: 100%;
+    padding: 5px 20px 5px;
+}
+.sub-menu-1 li:first-child{
+    margin-left: 0px;
+}
+.sub-menu-1 li:hover{
+    background-color: rgb(127, 153, 179);
+    cursor: pointer;
+}
+.sub-menu-1 a{
+    color: rgb(72, 92, 42);
+}
+.sub-menu-1 li:hover a{
+    color: #fffeff;
+}
+.sub-menu-1 a:hover{
+    color: #fffeff;
+}
 
 nav li {
     display: inline-block;
     list-style: none;
     text-transform: uppercase;
     margin-left: 9%;
-    height: 0;
-    line-height: 0;
+   /* height: 0;
+    line-height: 0;*/
 }
 nav li:first-child{
     margin-left: 0;
@@ -248,6 +291,7 @@ nav a{
     text-decoration: none;
     color: #fffeff;
     font-size: 18px;
+    padding: 0 0 30px;
 }
 nav a:hover{
     color: #fffeff;
@@ -258,24 +302,11 @@ nav a:hover{
  */
 
 .jumbo .slider {
-    background: url('../img/jumbo.jpg') center center no-repeat;
     height: 400px;
-    width: 100%;
-    background-size: 100%;
 }
 
 .fa-angle-left, .fa-angle-right{
-    position: absolute;
-}
-.fa-angle-left:hover, .fa-angle-right:hover{
-    cursor: pointer;
-} 
-i.fa-angle-left{
-    top: 100px;
-}
-i.fa-angle-right{
-    right: 0;
-    top: 100px;
+    color: #555;
 }
 div.jumbo-subheadings{
     margin: 20px auto;
@@ -488,11 +519,36 @@ and (max-width: 1024px){
 
     
     /*       Menu       */
-    
-    .nav-row{
+
+    .nav-row {
         margin-bottom: 60px;
     }
+    #mobile-menu{
+        display: block;
+    }
 
+    #mobile-menu ul {
+        display: none;
+        position: absolute;
+        top: 10px;
+        right: 30px;
+        width: 150px;
+        box-shadow: 3px 5px 10px -3px rgb(127, 153, 179);
+        border-radius: 2px;
+        background-color: #fffeff;
+    }
+
+    #mobile-menu li {
+        font-size: 16px;
+        list-style: none;
+        text-align: left;
+        padding: 5px 20px;
+        margin-bottom: 0;
+    }
+    #mobile-menu a {
+        color: rgb(72, 92, 42);
+        text-decoration: none;
+    }
     i.fa.fa-bars{
         margin: 2.75% 8.5%;
         display: block;
@@ -501,30 +557,7 @@ and (max-width: 1024px){
 
     nav ul {
         display: none;
-        position: absolute;
-        top: 0;
-        right: 0;
-        margin: 2.5% 7.5%;
-        max-width: 200px;
-        background-color: rgb(203, 204, 206);
-        z-index: 1;
     }
-    nav li {
-        display: block;
-        height: 20px;
-        line-height: 30px;
-        margin-left: 50px;
-        text-align: left;
-        width: 130px;
-    }
-    nav li:first-child{
-        margin-left: 50px;
-        margin-top: 5px;
-    }
-    nav a{
-        color: rgb(72, 92, 42);
-    }
-    
     div.social{
         font-size: 1.25em;
         top: 65px;
@@ -537,6 +570,12 @@ and (max-width: 1024px){
     }
     .fa-facebook{
         margin-right: 11.5px!important;
+    }
+
+    /*         Slider        */
+
+    .unslider-arrow{
+        display: none;
     }
 
     /*        Footer       */

@@ -6,24 +6,26 @@
 		
     mobileMenu(); // init mobile menu
 
-    
+    $('#slider').unslider({ autoplay : true , delay : 7000});
 
+    $('.unslider-arrow.next').html('<i class="fa fa-angle-right fa-3x" aria-hidden="true"></i>');
+    $('.unslider-arrow.prev').html('<i class="fa fa-angle-left fa-3x" aria-hidden="true"></i>');
 	});// end on doc load
 
 
   mobileMenu = function(){
 
     // toggle display on click
-    $('#mobile-menu').click(function(e){
-      $('nav ul').toggle();
+    $('#mobile-menu .fa-bars').click(function(){
+      $('#mobile-menu ul').toggle();
     });
 
     // display/hide nav on window resize
     $(window).resize(function(e){
       if(e.target.innerWidth > 1024){
-        $('nav ul').css('display', 'block');
+        $('#mobile-menu ul').css('display', 'none');
       } else {
-        $('nav ul').css('display', 'none');
+        $('#mobile-menu ul').css('display', 'none');
       }
     });
   }
