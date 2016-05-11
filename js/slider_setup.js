@@ -10,19 +10,19 @@
 	html = "";
 
 	imgMeta.forEach(function(d){
-		html += `<li>`;
-    html += `<div class="row slider max-width" style="background:url('/img/${d.img}') center center no-repeat; background-size: 100%;">`;
-    html += `</div>`;  // end row slider
-    html += `<div class="row jumbo-subheadings max-width">`;
-    html += `<div class="columns six">`;
-    html += `<h3 id="slider-author" class="jumbo-h3">${d.author}</h3>`;
-    html += `</div>`; // end columns six
-    html += `<div class="columns six">`;
-    html += `<p id="slider-title" class="jumbo-subheading">${d.title}</p>`;
-    html += `<p id="slider-dates" class="jumbo-subheading">${d.dates}</p>`;
-    html += `</div>`;  // end columns six
-    html += `</div>`;  // end jumbo-subheadings
-    html += `</li>`;
+		html += "<li>";
+        html += "<div class='row slider max-width' style='background:url(\"/img/"+d.img+"\") center center no-repeat; background-size: 100%;'>";
+        html += "</div>";  // end row slider
+        html += "<div class='row jumbo-subheadings max-width'>";
+        html += "<div class='columns six'>";
+        html += "<h3 id='slider-author' class='jumbo-h3'>"+d.author+"</h3>";
+        html += "</div>"; // end columns six
+        html += "<div class='columns six'>";
+        html += "<p id='slider-title' class='jumbo-subheading'>"+d.title+"</p>";
+        html += "<p id='slider-dates' class='jumbo-subheading'>"+d.dates+"</p>";
+        html += "</div>";  // end columns six
+        html += "</div>";  // end jumbo-subheadings
+        html += "</li>";
 	});
 
   $('#slider ul').html(html);
